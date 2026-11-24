@@ -1,131 +1,59 @@
-# My-CV-TiT - Portfolio CV của Lê Đức Anh
+# My-CV-TiT — Portfolio Lê Đức Anh
 
-## Tên dự án
-
-**My-CV-TiT** là trang CV và portfolio cá nhân của Lê Đức Anh, định hướng Frontend Developer.
-
-## Mô tả
-
-Dự án là một website tĩnh, giới thiệu thông tin cá nhân, kỹ năng, các dự án tiêu biểu và cách liên hệ. Giao diện được xây dựng theo hướng responsive để sử dụng trên điện thoại, máy tính bảng và máy tính. Nội dung trang được viết trực tiếp trong HTML và kiểu dáng được quản lý bằng một tệp CSS riêng.
+Website cá nhân giới thiệu bản thân, kỹ năng, sở thích và thông tin liên hệ. Phiên bản 2.3 sử dụng giao diện tối xanh đen, điểm nhấn xanh ngọc và bố cục responsive.
 
 ## Chức năng
-
-- Điều hướng đến các phần Giới thiệu, Kỹ năng, Dự án và Liên hệ ngay trên một trang.
-- Hiển thị ảnh đại diện, thông tin giới thiệu và danh sách kỹ năng.
-- Trình bày bốn dự án dưới dạng thẻ có ảnh, mô tả và nhãn công nghệ.
-- Bố cục dự án tự thay đổi theo kích thước màn hình: một cột trên màn hình nhỏ, hai cột từ 768px và ba cột từ 1280px.
-- Cung cấp liên kết email để liên hệ và nút quay về đầu trang.
-
-> Các thẻ dự án hiện chỉ là nội dung giới thiệu tĩnh; một số liên kết chi tiết và hồ sơ mạng xã hội vẫn là liên kết placeholder (`#`).
+- Giới thiệu bản thân và ảnh đại diện.
+- Hiển thị sáu kỹ năng đang học tập, rèn luyện.
+- Bốn thẻ nội dung cá nhân có ảnh và liên kết mở ảnh gốc.
+- Điều hướng cuộn mượt, nút về đầu trang, biểu mẫu liên hệ cuối trang (họ tên, email, số điện thoại, chủ đề, lời nhắn), nút gửi lời nhắn và liên kết GitHub.
+- Hiệu ứng xuất hiện khi tải trang, hover trên nút, kỹ năng và thẻ nội dung.
+- Hỗ trợ tùy chọn giảm chuyển động của hệ điều hành.
 
 ## Công nghệ
+HTML5 semantic, CSS3, Flexbox, Grid, Media Queries, CSS animation và transition. Website không sử dụng JavaScript, backend hay thư viện ngoài.
 
-- HTML5
-- CSS3: Flexbox, CSS Grid, custom properties, media queries và hỗ trợ `prefers-reduced-motion`
-- Python 3 (tùy chọn, chỉ dùng máy chủ HTTP đơn giản để xem thử)
-- Docker và Nginx (tùy chọn, để chạy website trong container)
-
-Trang hiện không cần JavaScript, Node.js, npm, cơ sở dữ liệu hoặc dịch vụ backend.
-
-## Yêu cầu môi trường
-
-- Windows, macOS hoặc Linux.
-- Trình duyệt hiện đại như Chrome, Firefox, Edge hoặc Safari.
-- Để chạy máy chủ xem thử: Python 3. Nếu chỉ mở trực tiếp `index.html`, không cần cài Python.
-- Để chạy bằng Docker: Docker Engine hoặc Docker Desktop đang hoạt động. Lần chạy đầu cần truy cập Internet để tải image `nginx:alpine`.
-
-## Cài đặt
-
-Tải mã nguồn hoặc clone repository về máy. Nếu đã có URL repository, thay `<URL-repository>` bằng URL đó:
-
-```bash
-git clone <URL-repository> My-CV-TiT
-cd My-CV-TiT
+## Cấu trúc thư mục
+```text
+My-CV-TiT-main/
+├── index.html
+├── assets/css/
+│   ├── styles.css
+│   └── img/ (5 ảnh gốc)
+├── README.md
+└── docs/
+    ├── AL_LOG.md
+    ├── RELEASENNOTE.md
+    ├── test_report.md
+    └── screenshots/ (3 ảnh minh chứng)
 ```
 
-Không cần cài thư viện hay chạy lệnh build. Nếu mã nguồn đã được tải về, mở terminal tại thư mục gốc của dự án, nơi chứa `index.html`.
+## Cách chạy
+1. Giải nén hoặc clone repository.
+2. Mở thư mục bằng VS Code.
+3. Mở `index.html` bằng trình duyệt hoặc dùng Live Server.
 
-## Cấu hình
+Có thể chạy máy chủ cục bộ bằng Python: `python -m http.server 8000`, rồi mở `http://localhost:8000`.
 
-Dự án không có bước cấu hình môi trường và không sử dụng tệp `.env`.
+## Responsive
+- Mobile: dưới 768px, dự án 1 cột.
+- Tablet: từ 768px, dự án 2 cột.
+- Desktop: từ 1280px, dự án 2 cột rộng hơn.
 
-- Nội dung, tiêu đề và liên kết được chỉnh sửa trong `index.html`.
-- Kiểu dáng và breakpoint responsive được chỉnh sửa trong `assets/css/styles.css`.
-- Ảnh nằm trong `assets/css/img/`. Khi thay ảnh, cập nhật đường dẫn `src` tương ứng trong `index.html` và giữ đúng tên tệp.
-- Trước khi đưa trang lên sử dụng, hãy thay các liên kết placeholder bằng URL dự án và hồ sơ thực tế.
+## Minh chứng giao diện v2.3
+[Desktop 1440×900](docs/screenshots/responsive-desktop-1440x900.png) · [Tablet 768×1024](docs/screenshots/responsive-tablet-768x1024.png) · [Mobile 390×844](docs/screenshots/responsive-mobile-390x844.png)
 
-## Chạy thử
+Ảnh chụp toàn trang từ Chromium với giao diện v2.3 (kiểm thử HTML nhúng tài nguyên do môi trường chặn máy chủ cục bộ). Bốn ảnh dự án gốc được giữ nguyên nội dung, đổi sang tên không dấu, không khoảng trắng; đường dẫn ảnh và liên kết mở ảnh được cập nhật. Khung ảnh dùng object-fit: contain để không cắt mất nội dung.
 
-### Windows
+## Triển khai GitHub Pages
+Đẩy nội dung thư mục dự án lên repository, vào Settings → Pages, chọn Deploy from a branch → main → / (root) → Save. Kiểm tra địa chỉ website sau khi triển khai.
 
-Mở PowerShell tại thư mục dự án và chạy:
+## Tài liệu
+- [Nhật ký thay đổi](docs/AL_LOG.md)
+- [Ghi chú phiên bản](docs/RELEASENNOTE.md)
+- [Báo cáo kiểm thử](docs/test_report.md)
 
-```powershell
-py -m http.server 8000
-```
+## Hạn chế
+Biểu mẫu dùng HTML với `required`, `type="email"` và `mailto:`. Nút gửi mở ứng dụng email đã được cấu hình trên thiết bị; người dùng cần tự xác nhận gửi. Chưa có backend, không lưu dữ liệu và không gửi trực tiếp từ website. Các thẻ cá nhân mở ảnh minh họa, không phải liên kết ứng dụng đã triển khai.
 
-Nếu lệnh `py` không có trên máy, thử `python -m http.server 8000`.
-
-### macOS
-
-Mở Terminal tại thư mục dự án và chạy:
-
-```bash
-python3 -m http.server 8000
-```
-
-### Linux
-
-Mở terminal tại thư mục dự án và chạy:
-
-```bash
-python3 -m http.server 8000
-```
-
-Sau khi máy chủ khởi động, mở <http://localhost:8000> trong trình duyệt. Dừng máy chủ bằng `Ctrl+C`. Nếu không muốn dùng máy chủ cục bộ, có thể mở trực tiếp tệp `index.html` trong trình duyệt.
-
-### Kiểm tra nhanh
-
-- Thử các mục điều hướng và nút trên trang để xác nhận chúng cuộn đến đúng phần.
-- Kiểm tra ảnh đại diện và ảnh dự án có tải thành công.
-- Thu nhỏ cửa sổ hoặc dùng chế độ thiết bị di động của trình duyệt để kiểm tra bố cục responsive.
-- Nhấn liên kết email để xác nhận trình duyệt mở ứng dụng email mặc định.
-
-Dự án hiện chưa có bộ kiểm thử tự động.
-
-## Chạy bằng Docker
-
-Các lệnh dưới đây cần được chạy tại thư mục gốc dự án và yêu cầu Docker đang hoạt động. Chúng dùng Nginx để phục vụ trực tiếp các tệp tĩnh, không cần tạo image riêng.
-
-### Windows PowerShell
-
-```powershell
-docker run --rm -d --name my-cv-tit -p 8080:80 -v "${PWD}:/usr/share/nginx/html:ro" nginx:alpine
-```
-
-### Windows Command Prompt (CMD)
-
-```cmd
-docker run --rm -d --name my-cv-tit -p 8080:80 -v "%cd%:/usr/share/nginx/html:ro" nginx:alpine
-```
-
-### macOS và Linux
-
-```bash
-docker run --rm -d --name my-cv-tit -p 8080:80 -v "$PWD:/usr/share/nginx/html:ro" nginx:alpine
-```
-
-Mở <http://localhost:8080> để xem trang. Dừng container bằng:
-
-```bash
-docker stop my-cv-tit
-```
-
-Nếu cổng `8080` đang được sử dụng, đổi phần `8080:80` thành một cổng trống khác, ví dụ `8081:80`, rồi mở cổng tương ứng trên trình duyệt.
-
-## Thông tin liên hệ
-
-- **Tên:** Lê Đức Anh
-- **Email:** [anhleduc197@gmail.com](mailto:anhleduc197@gmail.com)
-- **GitHub:** [github.com/anhleduc197-creator](https://github.com/anhleduc197-creator)
-- **LinkedIn:** linkedin.com/in/leduc (cần cập nhật liên kết đích trong trang)
+Tác giả: Lê Đức Anh.
