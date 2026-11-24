@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<!-- lang="vi" khai báo ngôn ngữ trang → hỗ trợ screen reader & SEO -->
+<html lang="vi">
+<head>
+<!-- ========== METADATA BẮT BUỘC ========== -->
+<meta charset="utf-8"/>
+<!-- viewport: nền tảng của responsive mobile-first, khóa tỉ lệ 1:1 với thiết bị -->
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Portfolio CV của Lê Đức Anh – Frontend Developer. Dự án, kỹ năng và thông tin liên hệ." name="description"/>
+<meta content="Lê Đức Anh" name="author"/>
+<title>Lê Đức Anh · Frontend Developer</title>
+<!-- Liên kết tới file CSS tách rời (yêu cầu của bài) -->
+<link href="./assets/css/styles.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- ========================================================== -->
+<!-- HEADER: nhận diện + điều hướng chính                        -->
+<!-- ========================================================== -->
+<header class="site-header">
+<div class="container header-inner">
+<!-- Thương hiệu cá nhân -->
+<a aria-label="Về đầu trang" class="brand" href="#top">
+<span aria-hidden="true" class="brand-mark">DA</span>
+<span class="brand-name">Lê Đức Anh</span>
+</a>
+<!-- NAV dùng Flexbox (xem styles.css) -->
+<nav aria-label="Điều hướng chính" class="main-nav">
+<ul class="nav-list">
+<li><a href="#about">Giới thiệu</a></li>
+<li><a href="#skills">Kỹ năng</a></li>
+<li><a href="#projects">Dự án</a></li>
+<li><a href="#contact">Liên hệ</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- ========================================================== -->
+<!-- MAIN: toàn bộ nội dung chính của trang                      -->
+<!-- ========================================================== -->
+<main id="top">
+<!-- ----- SECTION: Giới thiệu / Hero ----- -->
+<section class="hero" id="about">
+<div class="container hero-inner">
+<div class="hero-text">
+<p class="eyebrow">Xin chào, tôi là</p>
+<h1 class="hero-title">Lê Đức Anh</h1>
+<p class="hero-role">Frontend Developer &amp; UI Enthusiast</p>
+<p class="hero-desc">Tôi yêu thích công nghệ, thiết kế giao diện và những trải nghiệm nhỏ trong cuộc sống. Đây là nơi tôi lưu lại hành trình học tập và những điều mình yêu thích.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#projects">Xem dự án</a>
+<a class="btn btn-outline" href="#contact">Liên hệ tôi</a>
+</div>
+</div>
+<!-- Ảnh đại diện: dùng placeholder, thay bằng ảnh thật của bạn -->
+<figure class="hero-avatar">
+<img alt="Ảnh đại diện của Lê Đức Anh" height="320" src="./assets/css/img/2aOboR43wIMgNFLnnIBNB73duMTNGjELCMDqUNlI.jpg" width="320"/>
+<figcaption>01 / HELLO, WORLD.</figcaption></figure>
+</div>
+</section>
+<!-- ----- SECTION: Kỹ năng ----- -->
+<section class="section" id="skills">
+<div class="container">
+<p class="section-kicker">02 / PORTFOLIO</p><h2 class="section-title">Kỹ năng</h2>
+<p class="section-sub">Những công nghệ và kỹ năng tôi đang tìm hiểu và rèn luyện.</p>
+<ul class="skill-grid">
+<li class="skill-chip">HTML5</li>
+<li class="skill-chip">CSS3 / Flexbox / Grid</li>
+<li class="skill-chip">JavaScript (ES6+)</li>
+<li class="skill-chip">Responsive Design</li>
+<li class="skill-chip">Git &amp; GitHub</li>
+<li class="skill-chip">Figma / Wireframe</li>
+</ul>
+</div>
+</section>
+<!-- ----- SECTION: Dự án (danh sách thẻ dùng CSS Grid) ----- -->
+<section class="section section-muted" id="projects">
+<div class="container">
+<p class="section-kicker">03 / PORTFOLIO</p><h2 class="section-title">Dự án tiêu biểu</h2>
+<p class="section-sub">Bốn góc nhìn về sở thích, công nghệ và cuộc sống của tôi.</p>
+<!-- .project-grid dùng CSS Grid (xem styles.css) -->
+<div class="project-grid">
+<!-- Mỗi thẻ là một <article> độc lập, có thể đứng riêng -->
+<article class="card">
+<img alt="Ô tô" class="card-media" height="400" src="./assets/css/img/my-oto.jpg" width="600"/>
+<div class="card-body">
+<h3 class="card-title">MY OTO</h3>
+<p class="card-desc">Niềm yêu thích dành cho ô tô và những thiết kế mang dấu ấn riêng.</p>
+<ul class="tag-list"><li>Ô tô</li><li>Sở thích</li></ul>
+<a class="card-link" href="./assets/css/img/my-oto.jpg" rel="noopener" target="_blank">Xem ảnh ↗</a>
+</div>
+</article>
+<article class="card">
+<img alt="Máy tính" class="card-media" height="400" src="./assets/css/img/may-tinh.jpg" width="600"/>
+<div class="card-body">
+<h3 class="card-title">SỬA MÁY TÍNH</h3>
+<p class="card-desc">Góc khám phá phần cứng máy tính và tìm hiểu cách xử lý các lỗi thường gặp.</p>
+<ul class="tag-list"><li>Công nghệ</li><li>Phần cứng</li></ul>
+<a class="card-link" href="./assets/css/img/may-tinh.jpg" rel="noopener" target="_blank">Xem ảnh ↗</a>
+</div>
+</article>
+<article class="card">
+<img alt="Chú sói" class="card-media" height="400" src="./assets/css/img/soi-co-don.jpg" width="600"/>
+<div class="card-body">
+<h3 class="card-title">CHÚ SÓI ĐẦU ĐÀN</h3>
+<p class="card-desc">Hình ảnh chú sói gợi nhắc về sự kiên trì, độc lập và tinh thần vượt khó.</p>
+<ul class="tag-list"><li>Cảm hứng</li><li>Cuộc sống</li></ul>
+<a class="card-link" href="./assets/css/img/soi-co-don.jpg" rel="noopener" target="_blank">Xem ảnh ↗</a>
+</div>
+</article>
+<article class="card">
+<img alt="Đôi giày" class="card-media" height="400" src="./assets/css/img/doi-giay-tuoi-18.jpg" width="600"/>
+<div class="card-body">
+<h3 class="card-title">ĐÔI GIÀY MƠ ƯỚC</h3>
+<p class="card-desc">Một sở thích cá nhân và một mục tiêu nhỏ của tuổi 18.</p>
+<ul class="tag-list"><li>Phong cách</li><li>Mục tiêu</li></ul>
+<a class="card-link" href="./assets/css/img/doi-giay-tuoi-18.jpg" rel="noopener" target="_blank">Xem ảnh ↗</a>
+</div>
+</article>
+</div><!-- /.project-grid -->
+</div>
+</section>
+<!-- ----- SECTION: Liên hệ ----- -->
+<section class="section" id="contact">
+<div class="container contact-inner">
+<div class="contact-intro">
+<p class="section-kicker">04 / PORTFOLIO</p>
+<h2 class="section-title">Liên hệ với tôi</h2>
+<p class="section-sub">Bạn có câu hỏi, ý tưởng hay muốn hợp tác? Hãy để lại thông tin và lời nhắn cho tôi nhé!</p>
+<p class="contact-email">Email: <a href="mailto:anhleduc197@gmail.com">anhleduc197@gmail.com</a></p>
+<p class="contact-email">GitHub: <a href="https://github.com/anhleduc197-creator" target="_blank" rel="noopener noreferrer">anhleduc197-creator ↗</a></p>
+</div>
+<!-- Biểu mẫu HTML: kiểm tra dữ liệu bằng required và type=email. -->
+<form class="contact-form" action="mailto:anhleduc197@gmail.com" method="post" enctype="text/plain" aria-describedby="form-note">
+<h3>Gửi lời nhắn</h3>
+<p class="form-note">Các trường có dấu * là bắt buộc.</p>
+<div class="form-row">
+<div class="form-field"><label for="full-name">Họ và tên *</label><input id="full-name" name="Ho va ten" type="text" placeholder="Nhập họ và tên" autocomplete="name" maxlength="100" required></div>
+<div class="form-field"><label for="email">Email *</label><input id="email" name="Email" type="email" placeholder="example@gmail.com" autocomplete="email" maxlength="254" required></div>
+</div>
+<div class="form-field"><label for="phone">Số điện thoại (không bắt buộc)</label><input id="phone" name="So dien thoai" type="tel" placeholder="Nhập số điện thoại" autocomplete="tel" maxlength="30"></div>
+<div class="form-field"><label for="subject">Chủ đề *</label><input id="subject" name="Chu de" type="text" placeholder="Bạn muốn trao đổi về điều gì?" maxlength="150" required></div>
+<div class="form-field"><label for="message">Nội dung lời nhắn *</label><textarea id="message" name="Loi nhan" rows="5" placeholder="Nhập lời nhắn của bạn..." maxlength="2000" required></textarea></div>
+<button class="btn btn-primary form-submit" type="submit">Gửi lời nhắn ↗</button>
+<p id="form-note" class="form-note">Nút gửi mở ứng dụng email trên thiết bị để bạn kiểm tra và gửi thư. Website không tự lưu hay gửi dữ liệu trực tiếp.</p>
+</form>
+</div>
+</section>
+</main>
+<!-- ========================================================== -->
+<!-- FOOTER                                                      -->
+<!-- ========================================================== -->
+<footer class="site-footer">
+<div class="container footer-inner">
+<p>© 2026 Lê Đức Anh. Thiết kế &amp; xây dựng bằng HTML5 + CSS3.</p>
+<a class="to-top" href="#top">↑ Lên đầu trang</a>
+</div>
+</footer>
+</body>
+</html>
